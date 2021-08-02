@@ -147,8 +147,35 @@ background: black;
   border-radius: 20px 20px;
   padding: 3px;
 }
+.plates{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: orange;
+  font-size:20px;
+  border: 2px solid orange;
+  background: black;
+}
+.plate{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin:10px;
+  border-radius:40px 40px;
+  color: orange;
+  font-size:20px;
+  border: 2px solid orange;
+}
 
-
+.plate-image{
+  width:100%;
+}
+.plate-image img{
+  width: 100%;
+}
 .book-link:hover {
   background: #343c43;
 }
@@ -316,11 +343,39 @@ background: black;
 .stripe-section {
   margin-top: 2rem;
 } 
-@media screen and (max-width: 768px) {
-  /* .logo{
-    width: 40%;
+@media screen and (min-width: 768px) {
+  .header-container {
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+
     
-  } */
+  }.logo{
+   width:20% ;
+
+  }
+  .log-text{
+    width: 48%;
+    font-size:76px;
+  }.navigation{
+    width:30%;
+    
+  }.navigation a{
+    font-size:50px;
+    margin: 10px;
+  }.featured-head{
+    font-size:100px;
+  }.featured-list{
+    display:flex;
+    justify-content: center;
+    flex-direction:row;
+    margin: 10px;
+    padding: 10px;
+  }.featured-plate {
+    width: 23%;
+  }
 }
 /* @media screen and (max-width: 768px) {
 .log{
