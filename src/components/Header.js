@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header className="main-head">
-            <nav>
+            <nav className='navigation'>
                 <h1 id="logo">El Chinchorro De Frida</h1>
                 <ul>
                     <li>

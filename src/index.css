@@ -49,21 +49,24 @@ a {
 
 .btn {
   padding: 2rem 6rem;
-  background: #4c6e97;
+  background:transparent;
   color: white;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
 .btn:hover {
-  background: #121c27;
+  background: black;
+  
 }
 
 /* Nav Section */
 
 .main-head {
+  display: flex;
   background: #131c27;
-  color: white;
+  color: orange;
+  font-size:20px;
 }
 
 nav {
@@ -337,7 +340,7 @@ nav ul {
   margin-top: 2rem;
 }
 
-@media screen and (max-width: 933px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
@@ -352,5 +355,9 @@ nav ul {
 
   .book-details {
     margin-top: 4rem;
+    display: flex;
+  
+  }.detail-image{
+    width: 400px;
   }
 }
