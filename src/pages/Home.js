@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 
-import { BookContext } from "../context/books";
+import { PlateContext } from "../context/plates";
 
 const Home = () => {
-    const { featured } = useContext(BookContext);
+    const { featured } = useContext(PlateContext);
     if (!featured.length) {
         return <h3>No Featured Books</h3>
     }
@@ -22,7 +22,7 @@ const Home = () => {
                             <div className="book-image">
                                 <img src={image} alt={title} />
                             </div>
-                            <Link to={`books/${id}`} className="btn book-link">details</Link>
+                            <Link to={`plates/${id}`} className="btn book-link">details</Link>
                         </article>
                     ))}
                 </div>

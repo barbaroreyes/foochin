@@ -1,27 +1,27 @@
 import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
-import { BookContext } from '../context/books';
+import { PlateContext } from '../context/plates';
 
 
-const Books = () => {
-    const { books } = useContext(BookContext);
+const Plates = () => {
+    const { plates } = useContext(PlateContext);
 
-    if (!books.length) {
+    if (!plates.length) {
         return <h3>No Books Available</h3>
     }
 
     return (
         <section className="books">
-            {books.map(({ image: image, id, title }) => (
+            {plates.map(({ image: image, id, title }) => (
                 <article key={id} className="book">
                     <div className="book-image">
                         <img src={image} alt={title} />
                     </div>
-                    <Link to={`books/${id}`} className="btn book-link">details</Link>
+                    <Link to={`plates/${id}`} className="btn book-link">details</Link>
                 </article>
             ))}
         </section>
     )
 }
 
-export default Books
+export default Plates

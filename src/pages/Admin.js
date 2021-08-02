@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import { API, graphqlOperation, Storage } from "aws-amplify";
+import  { API, graphqlOperation, Storage } from "aws-amplify";
 import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
-import { createBook } from '../graphql/mutations'
+import { createPlate } from '../graphql/mutations'
 import config from '../aws-exports'
-
+// Amplify.configure(config)
 const {
     aws_user_files_s3_bucket_region: region,
     aws_user_files_s3_bucket: bucket
@@ -13,14 +13,14 @@ const {
 
 const Admin = () => {
     const [image, setImage] = useState(null);
-    const [bookDetails, setBookDetails] = useState({ title: "", description: "", image: "", author: "", price: "" });
+    const [plateDetails, setPlateDetails] = useState({ name: "", description: "", image: "", own: "", price: "" ,category:''});
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            if (!bookDetails.title || !bookDetails.price) return
-            await API.graphql(graphqlOperation(createBook, { input: bookDetails }))
-            setBookDetails({ title: "", description: "", image: "", author: "", price: "" })
+            if (!plateDetails.name || !plateDetails.price) return
+            await API.graphql(graphqlOperation(createPlate, { input: plateDetails }))
+            setPlateDetails({ name: "", description: "", image: "", own: "", price: "", category:""})
         } catch (err) {
             console.log('error creating todo:', err)
         }
@@ -42,7 +42,7 @@ const Admin = () => {
             // Retrieve the uploaded file to display
             const image = await Storage.get(key, { level: 'public' })
             setImage(image);
-            setBookDetails({ ...bookDetails, image: url });
+            setPlateDetails({ ...plateDetails, image: url });
         } catch (err) {
             console.log(err);
         }
@@ -53,8 +53,8 @@ const Admin = () => {
             <AmplifyAuthenticator>
                 <section>
                     <header className="form-header">
-                        <h3>Add New Book</h3>
-                        <AmplifySignOut></AmplifySignOut>
+                        <h3>Add New Plate</h3>
+                        <AmplifySignOut/>
                     </header>
                     <form className="form-wrapper" onSubmit={handleSubmit}>
                         <div className="form-image">
@@ -66,12 +66,12 @@ const Admin = () => {
                         </div>
                         <div className="form-fields">
                             <div className="title-form">
-                                <p><label htmlFor="title">Title</label></p>
+                                <p><label htmlFor="title">Name</label></p>
                                 <p><input
                                     name="email"
                                     type="title"
                                     placeholder="Type the title"
-                                    onChange={(e) => setBookDetails({ ...bookDetails, title: e.target.value })}
+                                    onChange={(e) => setPlateDetails({ ...plateDetails, name: e.target.value })}
                                     required
                                 /></p>
                             </div>
@@ -82,17 +82,17 @@ const Admin = () => {
                                     type="text"
                                     rows="8"
                                     placeholder="Type the description of the book"
-                                    onChange={(e) => setBookDetails({ ...bookDetails, description: e.target.value })}
+                                    onChange={(e) => setPlateDetails({ ...plateDetails, description: e.target.value })}
                                     required
                                 /></p>
                             </div>
                             <div className="author-form">
-                                <p><label htmlFor="author">Author</label></p>
+                                <p><label htmlFor="author">own</label></p>
                                 <p><input
                                     name="author"
                                     type="text"
-                                    placeholder="Type the author's name"
-                                    onChange={(e) => setBookDetails({ ...bookDetails, author: e.target.value })}
+                                    placeholder="Type the own's name"
+                                    onChange={(e) => setPlateDetails({ ...plateDetails, own: e.target.value })}
                                     required
                                 /></p>
                             </div>
@@ -102,7 +102,7 @@ const Admin = () => {
                                         name="price"
                                         type="text"
                                         placeholder="What is the Price of the book (USD)"
-                                        onChange={(e) => setBookDetails({ ...bookDetails, price: e.target.value })}
+                                        onChange={(e) => setPlateDetails({ ...plateDetails, price: e.target.value })}
                                         required
                                     /></p>
                             </div>
@@ -110,8 +110,8 @@ const Admin = () => {
                                 <p><label>Featured?</label>
                                     <input type="checkbox"
                                         className="featured-checkbox"
-                                        checked={bookDetails.featured}
-                                        onChange={() => setBookDetails({ ...bookDetails, featured: !bookDetails.featured })}
+                                        checked={plateDetails.featured}
+                                        onChange={() => setPlateDetails({ ...plateDetails, featured: !plateDetails.featured })}
                                     />
                                 </p>
                             </div>

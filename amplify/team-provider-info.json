@@ -18,11 +18,11 @@
       "function": {
         "createOrderP": {
           "deploymentBucketName": "amplify-foochin-dev-15410-deployment",
-          "s3Key": "amplify-builds/createOrderP-3541564875547431527a-build.zip"
+          "s3Key": "amplify-builds/createOrderP-7a6e765447324b5a4d4a-build.zip"
         },
         "processPaymentP": {
           "deploymentBucketName": "amplify-foochin-dev-15410-deployment",
-          "s3Key": "amplify-builds/processPaymentP-752b7556634c2f6c6354-build.zip"
+          "s3Key": "amplify-builds/processPaymentP-317a6c6878744c733578-build.zip"
         }
       }
     }

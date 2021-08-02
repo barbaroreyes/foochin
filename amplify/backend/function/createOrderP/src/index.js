@@ -2,10 +2,10 @@ const { v4: uuidv4 } = require("uuid");
 const AWS = require("aws-sdk");
 const documentClient = new AWS.DynamoDB.DocumentClient();
 
-const ORDER_TABLE = "<order_table_name>";
+const ORDER_TABLE = "Order-2jozx27bgjek3ax6l6heb2zo3m-dev";
 const ORDER_TYPE = "Order";
-const BOOK_ORDER_TABLE = "<book_order_table name>";
-const BOOK_ORDER_TYPE = "BookOrder";
+const PLATE_ORDER_TABLE = "PlateOrder-2jozx27bgjek3ax6l6heb2zo3m-dev";
+const PLATE_ORDER_TYPE = "PlateOrder";
 
 const createOrder = async (payload) => {
   const { order_id, username, email, total } = payload;
@@ -25,15 +25,15 @@ const createOrder = async (payload) => {
   await documentClient.put(params).promise();
 };
 
-const createBookOrder = async (payload) => {
-  let bookOrders = [];
+const createPlateOrder = async (payload) => {
+  let plateOrders = [];
   for (i = 0; i < payload.cart.length; i++) {
     const cartItem = payload.cart[i];
-    bookOrders.push({
+    plateOrders.push({
       PutRequest: {
         Item: {
           id: uuidv4(),
-          __typename: BOOK_ORDER_TYPE,
+          __typename: PLATE_ORDER_TYPE,
           book_id: cartItem.id,
           order_id: payload.order_id,
           customer: payload.email,
@@ -46,7 +46,7 @@ const createBookOrder = async (payload) => {
   let params = {
     RequestItems: {}
   };
-  params["RequestItems"][BOOK_ORDER_TABLE] = bookOrders;
+  params["RequestItems"][PLATE_ORDER_TABLE] = plateOrders;
   console.log(params);
   await documentClient.batchWrite(params).promise();
 };
@@ -66,7 +66,7 @@ exports.handler = async (event) => {
     await createOrder(payload);
 
     // links books with the order
-    await createBookOrder(payload);
+    await createPlateOrder(payload);
 
     // Note - You may add another function to email the invoice to the user
 

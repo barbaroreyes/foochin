@@ -6,7 +6,7 @@ const Hero = () => {
         <section className="hero">
             <h2>El Chinchorro De Frida</h2>
             <h3>Solo Ofertamos <br />Pura Delicias </h3>
-            <Link className="btn" to="/books">Todos Los Platos</Link>
+            <Link className="btn" to="/plates">Todos Los Platos</Link>
         </section>
     )
 }
