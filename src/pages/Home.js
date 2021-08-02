@@ -18,7 +18,7 @@ const Home = () => {
                 </header>
                 <div className="books featured-list">
                     {featured.map(({ id, image, title }) => (
-                        <article key={id} className="book featured-book">
+                        <article key={id} className="book featured-book ">
                             <div className="book-image">
                                 <img src={image} alt={title} />
                             </div>

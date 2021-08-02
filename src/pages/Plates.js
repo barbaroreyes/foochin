@@ -13,7 +13,7 @@ const Plates = () => {
     return (
         <section className="books">
             {plates.map(({ image: image, id, title }) => (
-                <article key={id} className="book">
+                <article key={id} className="book grow shadow-5">
                     <div className="book-image">
                         <img src={image} alt={title} />
                     </div>

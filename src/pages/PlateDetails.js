@@ -19,7 +19,7 @@ const PlateDetails = () => {
   const { image: url , name, description, own, price } = plate;
 
   return (
-    <section className="book-details">
+    <section className="book-details ">
       <div className="detail-image">
         <img src={url} alt="10x Rule" />
       </div>
