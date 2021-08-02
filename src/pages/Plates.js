@@ -17,7 +17,7 @@ const Plates = () => {
                     <div className="book-image">
                         <img src={image} alt={title} />
                     </div>
-                    <Link to={`plates/${id}`} className="btn book-link">ver mas</Link>
+                    <Link to={`plates/${id}`} className="btn bg-black book-link">ver mas</Link>
                 </article>
             ))}
         </section>

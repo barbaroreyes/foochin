@@ -49,14 +49,15 @@ a {
 
 .btn {
   padding: 2rem 6rem;
-  background:transparent;
-  color: white;
+  background:black;
+  color: orange;
   font-size: 2rem;
   text-transform: uppercase;
+  
 }
 
 .btn:hover {
-  background: black;
+  background:white;
   
 }
 
@@ -64,7 +65,7 @@ a {
 
 .main-head {
   display: flex;
-  background: #131c27;
+  background: black;
   color: orange;
   font-size:20px;
 }
@@ -121,12 +122,13 @@ nav ul {
 /* Featured Books and Books Section */
 
 .featured-head {
-  background: #343c44;
+  background: black;
   padding: 2rem;
-  color: white;
+  color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
 }
 
 .books {
@@ -367,5 +369,9 @@ nav ul {
   flex-wrap: wrap;
   }.nav li{
     margin: 10px;
+  }.especiales{
+    font-size: 50px;
+  }.btn{
+    border-radius: 40px 40px
   }
 }
