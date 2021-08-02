@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Header = () => {
     return (
-        <header className="main-head">
-            <nav className='navigation'>
-                <h1 id="logo">El Chinchorro De Frida</h1>
-                <ul className='nav'>
-                    <li>
+        <header className="header-container">
+            <img className="logo" src = "https://foochinfc1cd0cfacea4ccea0ccc60fa3e20f1515410-dev.s3.amazonaws.com/public/images/Elchinchorro.png" alt="#" />
+            <h1 className="log-text">El Chinchorro De Frida</h1>
+             
+                <div className='navigation'>
+                
                         <Link to="/">Home</Link>
-                    </li>
-                    <li>
+                    
+                    
                         <Link to="/plates">Ofertas</Link>
-                    </li>
-                    <li>
+                    
+                    
                         <Link to="/cart">Cart</Link>
-                    </li>
-                    <li>
+                
+                    
                         <Link to="/checkout">Checkout</Link>
-                    </li>
-                </ul>
-            </nav>
+            
+                </div>
+           
         </header>
     )
 }

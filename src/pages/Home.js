@@ -11,20 +11,20 @@ const Home = () => {
     }
     return (
         <>
-            <Hero />
+            <Hero/>
             <section className="featured">
                 <header className="featured-head">
                     <h3 className="especiales">Especiales</h3>
                 </header>
-                <div className="books featured-list">
+                <div className="featured-list">
                     {featured.map(({ id, image, name }) => (
-                        <article key={id} className="book featured-book grow ">
-                            <div className="book-image">
+                        <article key={id} className="featured-plate grow ">
+                            <div className="plate-image">
                                 <img src={image} alt={name} />
                             </div>
                             
                             <h1>{name}</h1>
-                            <Link to={`plates/${id}`} className="btn bg-black book-link">details</Link>
+                            <Link to={`plates/${id}`} className="btn">Detalles</Link>
                         </article>
                     ))}
                 </div>

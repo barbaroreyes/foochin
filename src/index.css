@@ -6,18 +6,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Pattaya', sans-serif;
 }
 
 html {
-  font-size: 62.5%
+  font-size: 60.5%
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-}
-
-h1 {
-  font-size: 2.6rem;
 }
 
 li,
@@ -33,8 +30,8 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
-  font-weight: 400;
+  /* font-size: 3rem;
+  font-weight: 400; */
 }
 
 h4,
@@ -43,16 +40,15 @@ h5 {
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 .btn {
-  padding: 2rem 6rem;
+  /* padding: 2rem 6rem;
   background:black;
   color: orange;
   font-size: 2rem;
-  text-transform: uppercase;
+  text-transform: uppercase; */
   
 }
 
@@ -63,36 +59,39 @@ a {
 
 /* Nav Section */
 
-.main-head {
+.header-container {
+  width: 100%;
   display: flex;
+  justify-content:center;
   background: black;
-  color: orange;
-  font-size:20px;
-}
-
-nav {
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  min-height: 10vh;
-  padding: 2rem;
-  width: 90%;
-  margin: auto;
+   border:  5px solid 
 }
-
-nav ul {
-  display: flex;
-  flex: 1 1 40rem;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
+.logo{
+  width: 52%;
 }
-
-#logo {
-  flex: 2 1 40rem;
+.log-text{
+  padding:5px;
   font-family: 'Pattaya', sans-serif;
-  font-weight: 400;
+  color:orange;
+  font-size:55px;
 }
+.navigation{
+  width: 100%;
+  border: 4px solid;
+  display: flex;
+  justify-content:center;
+  
+}
+.navigation a{
+  padding: 3px;
+  color: orange;
+  width: 100%;
+  font-family: 'Pattaya', sans-serif;
+  font-size: 20px;
+
+}
+
 
 /* Hero Section */
 
@@ -109,83 +108,59 @@ nav ul {
   align-items: center;
   text-align: center;
 }
-
-.hero h3 {
-  padding: 3rem;
+.featured{
+background: black;  
 }
-
-.hero .wrapper {
-  width: 90%;
-  margin: auto;
+.featured-head{
+ color: orange;
+ display: flex;
+ justify-content: center;
+ font-family: 'Pattaya', sans-serif;
+ font-size:50px;
+ padding:3px;
 }
-
-/* Featured Books and Books Section */
-
-.featured-head {
-  background: black;
-  padding: 2rem;
-  color: orange;
+.featured-list{
+  padding:1px;
+}
+.featured-plate{
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 40px;
-}
-
-.books {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  text-align: center;
-  width: 90%;
-  margin: auto;
-}
-
-.book {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
-  width: 22rem;
-  height: 28rem;
-  margin: 3rem 4rem;
-  border-top: 1px solid #efefef;
-  background: floralwhite;
+  padding: 30px;
+  margin:10px;
+  border-radius:40px 10px;
+  color: orange;
+  font-size:20px;
+  border: 10px solid orange;
+}
+.plate-image img{
+  border-radius:40px 10px;
+  width:100%;
+}
+.btn{
+  color: orange;
+  font-size: 20px;
+  border: 5px solid orange;
+  width: 141px;
+  text-align: center;
+  border-radius: 20px 20px;
+  padding: 3px;
 }
 
-.featured-list {
-  justify-content: space-evenly;
-}
-
-.featured-book {
-  margin: 1rem 0;
-}
-
-.book-image {
-  flex: 3 1 100rem;
-  padding: 2rem 0rem;
-}
-
-.book-link {
-  flex: 1 1 100rem;
-  background: #55606c;
-  font-size: 1.7rem;
-  width: 100%;
-  height: 100%;
-}
 
 .book-link:hover {
   background: #343c43;
 }
 
 .book img {
-  min-height: 10vh;
-  height: 21vh;
+  /* min-height: 10vh;
+  height: 21vh; */
 }
 
 /* Book Details Section */
 
-.book-details {
+/* .book-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -207,11 +182,11 @@ nav ul {
   justify-content: space-evenly;
   height: 75%;
   padding: 0 5rem;
-}
+} */
 
 /* Admin Section */
 
-.admin-wrapper {
+/* .admin-wrapper {
   width: 70%;
   margin: auto;
   text-align: center;
@@ -340,10 +315,20 @@ nav ul {
 
 .stripe-section {
   margin-top: 2rem;
-}
-
+} 
 @media screen and (max-width: 768px) {
-  html {
+  /* .logo{
+    width: 40%;
+    
+  } */
+}
+/* @media screen and (max-width: 768px) {
+.log{
+  width: 30%;
+}
+} */
+  
+  /* html {
     font-size: 62.5%;
   }
 
@@ -373,5 +358,4 @@ nav ul {
     font-size: 50px;
   }.btn{
     border-radius: 40px 40px
-  }
-}
+  } */
