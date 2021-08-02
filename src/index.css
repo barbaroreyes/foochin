@@ -10,7 +10,7 @@
 }
 
 html {
-  font-size: 60.5%
+  /* font-size: 60.5% */
 }
 
 body {
@@ -28,12 +28,6 @@ p {
 h2 {
   font-size: 4.8rem;
 }
-
-h3 {
-  /* font-size: 3rem;
-  font-weight: 400; */
-}
-
 h4,
 h5 {
   font-size: 2.8rem;
@@ -42,16 +36,6 @@ h5 {
 a {
   text-decoration: none;
 }
-
-.btn {
-  /* padding: 2rem 6rem;
-  background:black;
-  color: orange;
-  font-size: 2rem;
-  text-transform: uppercase; */
-  
-}
-
 .btn:hover {
   background:white;
   
@@ -179,110 +163,6 @@ background: black;
 .book-link:hover {
   background: #343c43;
 }
-
-.book img {
-  /* min-height: 10vh;
-  height: 21vh; */
-}
-
-/* Book Details Section */
-
-/* .book-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-  height: 80vh;
-  text-align: center
-}
-
-.detail-image {
-  text-align: center;
-}
-
-.detail-description {
-  display: flex;
-  flex: 1 1 50rem;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 75%;
-  padding: 0 5rem;
-} */
-
-/* Admin Section */
-
-/* .admin-wrapper {
-  width: 70%;
-  margin: auto;
-  text-align: center;
-}
-
-.form-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 3rem 0;
-}
-
-.form-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  border: 1px #c7c7c7 solid;
-  padding: 2rem;
-}
-
-.form-image {
-  flex: 1 1 50rem;
-}
-
-.image-preview {
-  width: 35rem;
-}
-
-.form-fields {
-  flex: 3 1 50rem;
-  text-align: left;
-}
-
-.form-fields input {
-  width: 100%;
-  height: 4rem;
-  font-size: 2rem;
-}
-
-.form-fields textarea {
-  width: 100%;
-  font-size: 2rem;
-}
-
-.form-wrapper label {
-  margin: 0rem 2rem;
-  text-align: left;
-}
-
-.title-form,
-.description-form,
-.author-form,
-.price-form,
-.submit-form,
-.featured-form {
-  padding: 0.7rem;
-}
-
-.form-fields .featured-checkbox {
-  width: 2rem;
-  position: relative;
-  top: 1.4rem;
-}
-
-.submit-form {
-  width: 100%;
-}
-
 /* Cart Section */
 
 .cart {
@@ -349,12 +229,9 @@ background: black;
     display:flex;
     justify-content:center;
     flex-direction: row;
-    align-items: center;
-
-    
+    align-items: center; 
   }.logo{
-   width:20% ;
-
+   width:20% 
   }
   .log-text{
     width: 48%;
@@ -368,49 +245,29 @@ background: black;
   }.featured-head{
     font-size:100px;
   }.featured-list{
+    width:100%;
     display:flex;
     justify-content: center;
-    flex-direction:row;
-    margin: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
     padding: 10px;
   }.featured-plate {
-    width: 23%;
+   width:43%;
+   display: flex;
+   justify-content: center;
+  }.plate-image img{
+    width:100%;
   }
 }
-/* @media screen and (max-width: 768px) {
-.log{
-  width: 30%;
+@media screen and (max-width: 1024px){
+ .header-container{
+   width:100%;
+   display: flex;
+ }.navigation{
+   width:45%;
+ }
 }
-} */
-  
-  /* html {
-    font-size: 62.5%;
-  }
 
-  nav {
-    text-align: center;
-  }
 
-  #logo {
-    padding: 1rem;
-  }
+ 
 
-  .book-details {
-    margin-top: 4rem;
-    display: flex;
-  
-  }.detail-image{
-    width: 400px;
-  }.navigation{
-    display: flex;
-    padding: 20px;
-  }.nav{
-    display: flex;
-  flex-wrap: wrap;
-  }.nav li{
-    margin: 10px;
-  }.especiales{
-    font-size: 50px;
-  }.btn{
-    border-radius: 40px 40px
-  } */
