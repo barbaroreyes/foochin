@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { PlateProvider } from "./context/plates";
 import App from './App';
 import './index.css';
+import 'tachyons'
 import { CartProvider } from './context/cart';
 import reportWebVitals from './reportWebVitals'
 ReactDOM.render(
