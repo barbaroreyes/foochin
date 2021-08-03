@@ -12,11 +12,13 @@ const Plates = () => {
 
     return (
         <section className="plates">
-            {plates.map(({ image: image, id, title }) => (
+            {plates.map(({ image: image, id, name }) => (
                 <article key={id} className="plate grow shadow-5">
                     <div className="plate-image">
-                        <img src={image} alt={title} />
+                        <img src={image} alt={name} />
                     </div>
+                      <span>{name}</span>
+
                     <Link to={`plates/${id}`} className="btn bg-black book-link">ver mas</Link>
                 </article>
             ))}
