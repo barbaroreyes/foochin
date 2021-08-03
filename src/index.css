@@ -9,10 +9,6 @@
   font-family: 'Pattaya', sans-serif;
 }
 
-html {
-  /* font-size: 60.5% */
-}
-
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -138,7 +134,7 @@ background: black;
   align-items: center;
   color: orange;
   font-size:20px;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   background: black;
 }
 .plate{
@@ -152,6 +148,7 @@ background: black;
   color: orange;
   font-size:20px;
   border: 2px solid orange;
+  width:83%;
 }
 
 .plate-image{
@@ -223,7 +220,7 @@ background: black;
 .stripe-section {
   margin-top: 2rem;
 } 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .header-container {
     width: 100%;
     display:flex;
@@ -237,7 +234,7 @@ background: black;
     width: 48%;
     font-size:76px;
   }.navigation{
-    width:30%;
+    width:34%;
     
   }.navigation a{
     font-size:50px;
@@ -252,19 +249,26 @@ background: black;
     margin: 20px;
     padding: 10px;
   }.featured-plate {
-   width:43%;
+   width:31%;
    display: flex;
    justify-content: center;
-  }.plate-image img{
+  }.plates{
     width:100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-direction: row;
+    align-items: center; */
+    
+  }.plate{
+    width:25%;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 1024px){
  .header-container{
-   width:100%;
-   display: flex;
- }.navigation{
-   width:45%;
+  border-top: 1px solid #fff
  }
 }
 
