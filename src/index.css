@@ -231,16 +231,16 @@ background: black;
    width:20% 
   }
   .log-text{
-    width: 48%;
-    font-size:76px;
+    width: 38%;
+    font-size:46px;
   }.navigation{
-    width:34%;
+    width:44%;
     
   }.navigation a{
     font-size:50px;
     margin: 10px;
   }.featured-head{
-    font-size:400px;
+    font-size:100px;
   }.featured-list{
     width:100%;
     display:flex;
@@ -249,7 +249,7 @@ background: black;
     margin: 20px;
     padding: 10px;
   }.featured-plate {
-   width:31%;
+   width:33%;
    display: flex;
    justify-content: center;
   }.plates{
@@ -266,11 +266,7 @@ background: black;
     padding: 20px;
   }
 }
-@media screen and (max-width: 1024px){
- .header-container{
-  border-top: 1px solid #fff
- }
-}
+
 
 
  
