@@ -1,18 +1,39 @@
-import React, { useContext } from 'react'
+import React, { useContext ,useState} from 'react'
 import { Link } from "react-router-dom";
 import { PlateContext } from '../context/plates';
 
 
 const Plates = () => {
     const { plates } = useContext(PlateContext);
-
+    const [searchName,setSearchName]= useState('')
+    const [searByCategory,setSearByCategory]= useState('')
+    
     if (!plates.length) {
         return <h3>No Plates Available</h3>
     }
-
+    const filterByCategory= (category)=>{
+        const filtered = plates.filter(item => item.category === category)
+       console.log('filtered',filtered)
+    }
     return (
         <section className="plates">
-            {plates.map(({ image: image, id, name }) => (
+    
+            <div className="filter">
+            <label>Encuentra tu Plato</label>
+            <input type="text" 
+            placeholder="plate"
+            onChange={(e) =>setSearchName(e.target.value)}
+            />
+            </div>
+            {plates.filter(item =>{
+            if(searchName ==='' ){
+             return  item
+            }
+            else if(item.name.toLowerCase().includes(searchName.toLowerCase())) {
+             return item
+            }
+            
+            }).map(({ image: image, id, name }) => (
                 <article key={id} className="plate grow shadow-5">
                     <div className="plate-image">
                         <img src={image} alt={name} />

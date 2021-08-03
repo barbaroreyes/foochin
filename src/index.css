@@ -220,6 +220,20 @@ background: black;
 .stripe-section {
   margin-top: 2rem;
 } 
+.filter{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding:30px;
+  margin:20px;
+}
+.buttons-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding:10px;
+}
 @media screen and (min-width: 600px) {
   .header-container {
     width: 100%;
@@ -264,6 +278,17 @@ background: black;
   }.plate{
     width:25%;
     padding: 20px;
+  }.filter{
+    display: flex;
+    justify-content: center;
+    width:100%;
+  }.buttons-div{
+    display: flex;
+    
+    justify-content: space-between;
+  }.buttons-div{
+   display: flex;
+   justify-content: space-around;
   }
 }
 
