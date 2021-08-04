@@ -12,7 +12,7 @@ const Cart = () => {
     return <h3>Empty Cart</h3>
   }
   return (
-    <section className="cart">
+    <section className="cart padding">
       <header>
         <h2>My Cart</h2>
       </header>
@@ -29,7 +29,7 @@ const Cart = () => {
             <div className="amount">
               <button onClick={() => increaseAmount(id)}><FiChevronUp /></button>
               <p>{amount}</p>
-              <button onClick={() => decreaseAmount(id, amount)}><FiChevronDown /></button>
+              <button  onClick={() => decreaseAmount(id, amount)}><FiChevronDown /></button>
             </div>
           </article>
         ))}
@@ -38,7 +38,9 @@ const Cart = () => {
         <h3>Total: $ {total}</h3>
       </div>
       <div>
-        <button className="btn" onClick={() => history.push("/checkout")}>Checkout</button>
+        <button  className="btn pa2 ma4" onClick={() => history.push("/checkout")}>Checkout</button>
+        <button  className="btn pa2 ma4" onClick={() => console.log('clean')}>Borrar Todo</button>
+        
       </div>
     </section>
   );

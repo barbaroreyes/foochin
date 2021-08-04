@@ -23,13 +23,13 @@ const PlateDetails = () => {
       <div className="detail-image">
         <img src={url} alt="10x Rule" />
       </div>
-      <div className="detail-description">
+      <div className="detail-description pa3 tc">
         <h2>{name}</h2>
         <p>{description}</p>
         <h3>{own}</h3>
         <h4>Price - $ {price}</h4>
         <button
-          className="btn"
+          className="btn ma4 pa3"
           onClick={() => {
             addToCart({ ...plate, id });
             history.push("/cart");
