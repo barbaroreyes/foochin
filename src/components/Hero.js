@@ -8,7 +8,7 @@ const Hero = () => {
              <h2>11 Am - 6 Pm</h2>
             <Link className="btn" to="/plates">Todos Los Platos</Link>
             <br/>
-            <h3>1773 Pali Dr El Paso TX</h3>
+            <h2>1773 Pali Dr El Paso TX</h2>
         </section>
     )
 }
