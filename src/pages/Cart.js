@@ -4,13 +4,16 @@ import { FiChevronUp } from "react-icons/fi";
 import { FiChevronDown } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
 
+
+
 const Cart = () => {
   const history = useHistory();
   const { cart, total, increaseAmount, decreaseAmount ,clearCart} = useContext(CartContext);
   
 
   if (!cart.length) {
-    return <h3>Empty Cart</h3>
+    return  <h3>Empty Cart</h3>
+
   }
   return (
     <section className="cart padding">
@@ -18,13 +21,15 @@ const Cart = () => {
         <h2>My Cart</h2>
       </header>
       <div className="cart-wrapper">
-        {cart.map(({ id, title, price, image, amount }) => (
+        {cart.map(({ id, name, price, image, amount }) => (
+          
           <article key={id} className="cart-item">
+            
             <div className="image">
               <img src={image} alt="cart item" />
             </div>
             <div className="details">
-              <p>{title}</p>
+              <p>{name}</p>
               <p>$ {price}</p>
             </div>
             <div className="amount">
@@ -32,8 +37,11 @@ const Cart = () => {
               <p>{amount}</p>
               <button  onClick={() => decreaseAmount(id, amount)}><FiChevronDown /></button>
             </div>
+            
           </article>
         ))}
+
+        
       </div>
       <div>
         <h3>Total: $ {total}</h3>
@@ -41,8 +49,9 @@ const Cart = () => {
       <div>
         <button  className="btn pa2 ma4" onClick={() => history.push("/checkout")}>Checkout</button>
         <button  className="btn pa2 ma4" onClick={() => clearCart()}>Borrar Todo</button>
-        
+       
       </div>
+      
     </section>
   );
 };

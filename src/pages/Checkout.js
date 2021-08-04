@@ -8,7 +8,7 @@ const Checkout = () => {
     const stripePromise = loadStripe('pk_test_51JBp6BFdjGfYcejFEt3mjBAIJKsaYio3ADiLrKcPF8Tqwoz8sJ2FxSdvqkijkMABI7DwNWjtvCJy2D7KjZAIkS0d00ZqwvCfb7');
 
     return (
-        <section className="checkout-wrapper tc">
+        <section className="checkout-wrapper tc pa2">
             {/* <AmplifyAuthenticator> */}
                 <Elements stripe={stripePromise}>
                     <section>
