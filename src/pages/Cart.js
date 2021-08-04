@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 const Cart = () => {
   const history = useHistory();
-  const { cart, total, increaseAmount, decreaseAmount } = useContext(CartContext);
+  const { cart, total, increaseAmount, decreaseAmount ,clearCart} = useContext(CartContext);
 
   if (!cart.length) {
     return <h3>Empty Cart</h3>
@@ -39,7 +39,7 @@ const Cart = () => {
       </div>
       <div>
         <button  className="btn pa2 ma4" onClick={() => history.push("/checkout")}>Checkout</button>
-        <button  className="btn pa2 ma4" onClick={() => console.log('clean')}>Borrar Todo</button>
+        <button  className="btn pa2 ma4" onClick={() => clearCart()}>Borrar Todo</button>
         
       </div>
     </section>
