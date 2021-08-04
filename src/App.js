@@ -22,7 +22,8 @@ Amplify.configure(awsExports);
 
 const App = () => {
   return (
-    <Router>
+    <div className='App'>
+     
       <Header />
       <Switch>
         <Route exact path="/">
@@ -48,7 +49,10 @@ const App = () => {
           <Error />
         </Route>
       </Switch>
-    </Router>
+   
+
+    </div>
+    
   );
 }
 

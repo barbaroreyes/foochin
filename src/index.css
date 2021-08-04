@@ -32,6 +32,9 @@ h5 {
 a {
   text-decoration: none;
 }
+.App{
+
+}
 .btn:hover {
   background:white;
   
@@ -282,9 +285,6 @@ background: black;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    /* flex-direction: row;
-    align-items: center; */
-    
   }.plate{
     width:25%;
     padding: 20px;
@@ -292,13 +292,6 @@ background: black;
     display: flex;
     justify-content: center;
     width:100%;
-  }.buttons-div{
-    display: flex;
-    
-    justify-content: space-between;
-  }.buttons-div{
-   display: flex;
-   justify-content: space-around;
   }
 }
 
