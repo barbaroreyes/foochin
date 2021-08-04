@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 const Cart = () => {
   const history = useHistory();
   const { cart, total, increaseAmount, decreaseAmount ,clearCart} = useContext(CartContext);
+  
 
   if (!cart.length) {
     return <h3>Empty Cart</h3>
