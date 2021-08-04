@@ -7,7 +7,7 @@ import { PlateContext } from "../context/plates";
 const Home = () => {
     const { featured } = useContext(PlateContext);
     if (!featured.length) {
-        return <h3>No Featured Books</h3>
+        return <h3>No Featured Plates</h3>
     }
     return (
         <>
