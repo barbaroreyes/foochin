@@ -134,7 +134,6 @@ background: black;
   align-items: center;
   color: orange;
   font-size:20px;
-  /* border: 2px solid orange; */
   background: black;
 }
 .plate{
@@ -163,14 +162,19 @@ background: black;
 /* Cart Section */
 
 .cart {
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   text-align: center;
+  color: orange;
+  background: black;
+  padding : 10px;
 }
 
 .cart-wrapper {
   display: flex;
   flex-direction: column;
+  border: 1px solid white;
+ 
 }
 
 .cart-item {
@@ -209,6 +213,10 @@ background: black;
   width: 60%;
   margin: auto;
   text-align: center;
+}
+.book-details{
+  background-color: black;
+  color: orange;
 }
 
 .checkout-form {
