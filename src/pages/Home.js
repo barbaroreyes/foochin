@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import Hero from "../components/Hero";
+import React, { useContext } from 'react';
 
-import { PlateContext } from "../context/plates";
+import { Link } from 'react-router-dom';
+
+import Hero from '../components/Hero';
+import { PlateContext } from '../context/plates';
 
 const Home = () => {
     const { featured } = useContext(PlateContext);
@@ -18,7 +19,7 @@ const Home = () => {
                 </header>
                 <div className="featured-list">
                     {featured.map(({ id, image, name }) => (
-                        <article key={id} className="featured-plate grow ">
+                        <article key={id} className="featured-plate grow ma4 pa3 ">
                             <div className="plate-image">
                                 <img src={image} alt={name} />
                             </div>
