@@ -31,7 +31,7 @@ exports.handler = async (event) => {
       amount: total * 100,
       currency: "usd",
       source: token,
-      description: `Order ${new Date()} by ${email}`
+      description: `Order ${new Date()} by ${username} with ${email}`
     });
     return { id, cart, total, address, username, email };
   } catch (err) {
