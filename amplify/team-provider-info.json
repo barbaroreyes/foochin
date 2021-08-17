@@ -22,7 +22,7 @@
         },
         "processPaymentP": {
           "deploymentBucketName": "amplify-foochin-dev-15410-deployment",
-          "s3Key": "amplify-builds/processPaymentP-7239477754646458644b-build.zip"
+          "s3Key": "amplify-builds/processPaymentP-6c6f52776c4735594e31-build.zip"
         }
       }
     }

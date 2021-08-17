@@ -7,7 +7,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from '../components/CheckoutForm';
 
 const Checkout = () => {
-    const stripePromise = loadStripe('pk_live_51JBp6BFdjGfYcejFaBa6bj1B8DGbCILTTWyR4rPEufaJOjcZ3quCBPzk1CM9JTuTAP8H9arjF3BFuuGgBQZMWihA00NRz1CMiO');
+    const stripePromise = loadStripe('pk_live_51JAGizDcnFjzr079npT2KNtNhm1aVdxPMHZqDdkdh3D0ztQEUTwJMMso9RJsn7C9BcVnxMtmgeecsGkwwHq1adAz00ZMUdCgL4');
 
     return (
         <section className="checkout-wrapper tc pa2">
