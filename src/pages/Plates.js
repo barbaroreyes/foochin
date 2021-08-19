@@ -10,7 +10,7 @@ import { PlateContext } from '../context/plates';
 const Plates = () => {
     const { plates } = useContext(PlateContext);
     const [searchName,setSearchName]= useState('')
-    const [searByCategory,setSearByCategory]= useState('Aperitivos')
+   
     
     if (!plates.length) {
         return <h3>No Plates Available</h3>
@@ -24,7 +24,7 @@ const Plates = () => {
            <div className="filter">
             <label>Encuentra tu Plato</label>
             <input type="text" 
-            placeholder="plate"
+            placeholder="plato"
             onChange={(e) =>setSearchName(e.target.value)}
             />
             
