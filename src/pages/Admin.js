@@ -1,9 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+
+import {
+  API,
+  graphqlOperation,
+  Storage,
+} from 'aws-amplify';
 import { v4 as uuidv4 } from 'uuid';
-import  { API, graphqlOperation, Storage } from "aws-amplify";
-import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
-import { createPlate } from '../graphql/mutations'
-import config from '../aws-exports'
+
+import {
+  AmplifyAuthenticator,
+  AmplifySignOut,
+} from '@aws-amplify/ui-react';
+
+import config from '../aws-exports';
+import { createPlate } from '../graphql/mutations';
+
 // Amplify.configure(config)
 const {
     aws_user_files_s3_bucket_region: region,
@@ -53,7 +64,7 @@ const Admin = () => {
             <AmplifyAuthenticator>
                 <section>
                     <header className="form-header">
-                        <h3>Add New Plate</h3>
+                        <h3>Add New Plates</h3>
                         <AmplifySignOut/>
                     </header>
                     <form className="form-wrapper" onSubmit={handleSubmit}>
