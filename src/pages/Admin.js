@@ -81,7 +81,7 @@ const Admin = () => {
                                 <p><input
                                     name="email"
                                     type="title"
-                                    placeholder="Type the title"
+                                    placeholder="type the plate"
                                     onChange={(e) => setPlateDetails({ ...plateDetails, name: e.target.value })}
                                     required
                                 /></p>
