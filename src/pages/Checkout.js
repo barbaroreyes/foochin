@@ -14,7 +14,7 @@ const Checkout = () => {
             <AmplifyAuthenticator>
                 <Elements stripe={stripePromise}>
                     <section>
-                        <h2>Checkout</h2>
+                        <h2>Pay</h2>
                         <CheckoutForm />
                     </section>
                 </Elements>
