@@ -26,5 +26,33 @@
         }
       }
     }
+  },
+  "pro": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-foochin-pro-02928-authRole",
+      "UnauthRoleArn": "arn:aws:iam::217175807922:role/amplify-foochin-pro-02928-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::217175807922:role/amplify-foochin-pro-02928-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-foochin-pro-02928-deployment",
+      "UnauthRoleName": "amplify-foochin-pro-02928-unauthRole",
+      "StackName": "amplify-foochin-pro-02928",
+      "StackId": "arn:aws:cloudformation:us-east-1:217175807922:stack/amplify-foochin-pro-02928/0aa75360-2e42-11ec-917c-0e02ab9cf84b",
+      "AmplifyAppId": "d1fsx06rngzc54"
+    },
+    "categories": {
+      "auth": {
+        "foochinb4502178": {}
+      },
+      "function": {
+        "processPaymentP": {
+          "deploymentBucketName": "amplify-foochin-pro-02928-deployment",
+          "s3Key": "amplify-builds/processPaymentP-4c64574973454b784442-build.zip"
+        },
+        "createOrderP": {
+          "deploymentBucketName": "amplify-foochin-pro-02928-deployment",
+          "s3Key": "amplify-builds/createOrderP-7a6e765447324b5a4d4a-build.zip"
+        }
+      }
+    }
   }
 }

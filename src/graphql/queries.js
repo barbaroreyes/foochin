@@ -91,6 +91,9 @@ export const listPlates = /* GraphQL */ `
         featured
         price
         category
+        orders {
+          nextToken
+        }
         createdAt
         updatedAt
       }
